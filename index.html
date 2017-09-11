@@ -12,7 +12,7 @@
     <h2 class="padding text-center">text</h2>
     <div class="flex">
         <div class="col padding-sm text-center">
-            <span class="text-lowercase">LOWERCASE</span>
+            <span class="text-lowercase">lowercase</span>
         </div>
         <div class="col padding-sm text-center">
             <span class="text-uppercase">uppercase</span>
@@ -51,16 +51,16 @@
     </div>
     <div class="flex">
         <div class="col padding-sm text-center bg-blur-danger text-white">
-            blur
+            bg-blur
         </div>
         <div class="col padding-sm text-center bg-blur-success text-white">
-            blur
+            bg-blur
         </div>
         <div class="col padding-sm text-center bg-blur-blue text-white">
-            blur
+            bg-blur
         </div>
         <div class="col padding-sm text-center bg-blur-warning text-white">
-            blur
+            bg-blur
         </div>
     </div>
     <div class="flex">
@@ -114,27 +114,27 @@
     </div>
     <div class="padding">
         <div class="text-wrap">
-            no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap
+            text-wrap text-wrap text-wrap text-wrap text-wrap text-wrap text-wrap
         </div>
     </div>
     <div class="padding">
         <div class="text-no-wrap">
-            no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap
+            text-no-wrap text-no-wrap text-no-wrap text-no-wrap text-no-wrap text-no-wrap
         </div>
     </div>
     <div class="padding">
         <div class="text-no-wrap-1">
-            no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap
+            text-no-wrap-1 text-no-wrap-1 text-no-wrap-1 text-no-wrap-1 text-no-wrap-1 text-no-wrap-1 text-no-wrap-1 text-no-wrap-1
         </div>
     </div>
     <div class="padding">
         <div class="text-no-wrap-2">
-            no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap
+            text-no-wrap-2 text-no-wrap-2 text-no-wrap-2 text-no-wrap-2 text-no-wrap-2 text-no-wrap-2 text-no-wrap-2 text-no-wrap-2 text-no-wrap-2 text-no-wrap-2 text-no-wrap-2 text-no-wrap-2 text-no-wrap-2 text-no-wrap-2 text-no-wrap-2 text-no-wrap-2
         </div>
     </div>
     <div class="padding">
         <div class="text-no-wrap-3">
-            no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap no-wrap
+            text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3 text-no-wrap-3
         </div>
     </div>
     <h2 class="text-center padding">
@@ -174,20 +174,238 @@
             <div class="col cel">cel</div>
         </div>
     </div>
-    <div class="cover">
+    <div class="cover" id="myalert" data-shown="">
         <div class="alert">
-            <header class="alert-title">title</header>
+            <header class="alert-title">提示</header>
             <div class="alert-content">
-                <div>
-                    content content content content content content content content content content content content content content content content content content content content
-                </div>
+                <div class="alert-content-text"></div>
             </div>
             <footer class="alert-bottom">
-                <button class="btn btn-default">button</button>
-                <button class="btn btn-danger">button</button>
-                <button class="btn btn-danger">button</button>
+                <button class="btn btn-default">关闭</button>
             </footer>
         </div>
     </div>
+    <div class="flex padding">
+        <div class="col text-center">
+            <button onclick="alert('btn-default')" class="btn btn-default" type="button">default</button>
+        </div>
+        <div class="col text-center">
+            <button onclick="alert('btn-default')" class="btn btn-default" type="button" disabled>disabled</button>
+        </div>
+        <div class="col text-center">
+            <button onclick="alert('btn-default')" class="btn btn-default active" type="button">active</button>
+        </div>
+    </div>
+    <div class="flex padding">
+        <div class="col text-center">
+            <button onclick="alert('btn-danger')" class="btn btn-danger" type="button">danger</button>
+        </div>
+        <div class="col text-center">
+            <button onclick="alert('btn-danger')" class="btn btn-danger" type="button" disabled>disabled</button>
+        </div>
+        <div class="col text-center">
+            <button onclick="alert('btn-danger')" class="btn btn-danger active" type="button">active</button>
+        </div>
+    </div>
+    <div class="flex padding">
+        <div class="col text-center">
+            <button onclick="alert('btn-success')" class="btn btn-success" type="button">success</button>
+        </div>
+        <div class="col text-center">
+            <button onclick="alert('btn-success')" class="btn btn-success" type="button" disabled>disabled</button>
+        </div>
+        <div class="col text-center">
+            <button onclick="alert('btn-success')" class="btn btn-success active" type="button">active</button>
+        </div>
+    </div>
+    <div class="flex padding">
+        <div class="col text-center">
+            <button onclick="alert('btn-blue')" class="btn btn-blue" type="button">blue</button>
+        </div>
+        <div class="col text-center">
+            <button onclick="alert('btn-blue')" class="btn btn-blue" type="button" disabled>disabled</button>
+        </div>
+        <div class="col text-center">
+            <button onclick="alert('btn-blue')" class="btn btn-blue active" type="button">active</button>
+        </div>
+    </div>
+    <div class="flex padding">
+        <div class="col text-center">
+            <button onclick="alert('btn-warning')" class="btn btn-warning" type="button">warning</button>
+        </div>
+        <div class="col text-center">
+            <button onclick="alert('btn-warning')" class="btn btn-warning" type="button" disabled>disabled</button>
+        </div>
+        <div class="col text-center">
+            <button onclick="alert('btn-warning')" class="btn btn-warning active" type="button">active</button>
+        </div>
+    </div>
+    <div class="flex padding">
+        <div class="col text-center">
+            <button class="btn btn-default dropdown-btn" type="button">
+            	dropdowns 
+            	<i class="fa fa-caret-down"></i>
+            	<ul class="dropdowns-list">
+            		<li>
+            			aaa
+            		</li>
+            		<li>
+            			aaa
+            		</li>
+            		<li>
+            			aaa
+            		</li>
+            	</ul>
+            </button>
+        </div>
+        <div class="col text-center">
+            <button class="btn btn-danger dropdown-btn" type="button">
+            	dropdowns 
+            	<i class="fa fa-caret-down"></i>
+            	<ul class="dropdowns-list dropdowns-list-right">
+            		<li>
+            			aaa
+            		</li>
+            		<li>
+            			aaa
+            		</li>
+            		<li>
+            			aaa
+            		</li>
+            	</ul>
+            </button>
+        </div>
+    </div>
+    <div class="padding">
+        <input type="text" class="input">
+    </div>
+    <ul class="list">
+        <li>
+            list-item
+        </li>
+        <li>
+            <div class="col">
+                list-item
+            </div>
+            <div>
+                more
+            </div>
+        </li>
+        <li>
+            <div class="col">
+                list-item
+            </div>
+            <div class="fa fa-angle-right text-blue"></div>
+        </li>
+        <li>
+            <div class="col">
+                list-item
+            </div>
+            <div>
+                more
+            </div>
+            <div class="fa fa-angle-right text-blue"></div>
+        </li>
+        <li>
+            <div>
+                name
+            </div>
+            <div class="col text-muted padding-sm">
+                desc
+            </div>
+            <div class="padding-sm">
+                <i class="dot"></i>
+            </div>
+        </li>
+        <li>
+            <div>
+                <div class="fa fa-user text-success"></div>
+            </div>
+            <div class="col padding-sm">
+                user
+            </div>
+        </li>
+        <li>
+            <div>
+                <div class="avatar bg-success text-white">
+                    <div class="fa fa-user"></div>
+                </div>
+            </div>
+            <div class="col padding-sm">
+                user
+            </div>
+        </li>
+        <li>
+            <div>
+                username:
+            </div>
+            <div class="col padding-sm">
+                <input type="text" class="input" placeholder="username">
+            </div>
+        </li>
+        <li>
+            <div>
+                type:
+            </div>
+            <form class="col padding-sm">
+                <label class="padding-sm">
+                    <input type="radio" name="radio">type1
+                </label>
+                <label class="padding-sm">
+                    <input type="radio" name="radio">type1
+                </label>
+                <label class="padding-sm">
+                    <input type="radio" name="radio">type1
+                </label>
+            </form>
+        </li>
+        <li>
+            <div>
+                type:
+            </div>
+            <form class="col padding-sm">
+                <label class="padding-sm">
+                    <input type="checkbox">type1
+                </label>
+                <label class="padding-sm">
+                    <input type="checkbox">type1
+                </label>
+                <label class="padding-sm">
+                    <input type="checkbox">type1
+                </label>
+            </form>
+        </li>
+        <li>
+            <div>
+                file:
+            </div>
+            <div class="col padding-sm">
+                <label class="btn btn-default btn-file text-capitalize">
+                    <input type="file"> choose file
+                </label>
+            </div>
+        </li>
+    </ul>
+    <script>
+    if (!/mobile/i.test(navigator.userAgent)) {
+        document.documentElement.style.fontSize = 14 + 'px';
+    }
+
+    function alert(msg) {
+    	var body = document.body;
+        var el = document.getElementById('myalert');
+        var content = el.querySelector('.alert-content-text');
+        var btn = el.querySelector('.btn');
+        el.classList.add('show-cover');
+        content.innerText = msg || '';
+        if (el.dataset.shown == '') {
+            btn.addEventListener('click', function() {
+                el.dataset.shown = 'clicked';
+                el.classList.remove('show-cover');
+            }, false);
+        }
+    }
+    </script>
 </body>
+
 </html>

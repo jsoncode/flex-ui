@@ -6,7 +6,7 @@
  */
 
 @import "../fonts/googlefonts/fonts.css";
-@import "../fonts/icon.css";
+@import "../fonts/font-awesome/css/font-awesome.min.css";
 html {
     box-sizing: border-box;
     font-family: sans-serif;
@@ -41,7 +41,7 @@ body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 1rem;
-    font-weight: normal;
+    font-weight: 400;
     line-height: 1.5;
     color: #212529;
     background-color: #fff;
@@ -60,7 +60,6 @@ h6 {
     color: inherit;
     margin-top: 0;
     margin-bottom: 0;
-    font-family: inherit;
 }
 
 p,
@@ -69,6 +68,7 @@ ul,
 dl {
     margin-top: 0;
     margin-bottom: 0;
+    list-style: none;
 }
 
 ol ol,
@@ -96,7 +96,6 @@ textarea {
     font-family: inhert;
     outline: 0;
     touch-action: manipulation;
-    -webkit-appearance: button;
     font-size: inherit;
 }
 
@@ -120,9 +119,8 @@ button {
 
 button {
     display: inline-block;
-    background-color: #ddd;
-    border: 1px solid #ddd;
-    font: inhert;
+    background-color: #eee;
+    border: 0;
 }
 
 table {
@@ -146,23 +144,27 @@ template {
 }
 
 .text-danger {
-    color: #c00;
+    color: #e55;
 }
 
 .text-success {
-    color: #0c0;
+    color: #5d5;
 }
 
 .text-blue {
-    color: #00c;
+    color: #6192ff;
 }
 
 .text-warning {
-    color: #dcb90a;
+    color: #F6A623;
 }
 
 .text-white {
     color: #fff;
+}
+
+.text-muted {
+    color: #aaa;
 }
 
 .bg-white {
@@ -170,39 +172,39 @@ template {
 }
 
 .bg-danger {
-    background-color: #c00;
+    background-color: #e55;
 }
 
 .bg-success {
-    background-color: #0c0;
+    background-color: #5d5;
 }
 
 .bg-warning {
-    background-color: #dcb90a;
+    background-color: #F6A623;
 }
 
 .bg-blue {
-    background-color: #00e;
+    background-color: #6192ff;
 }
 
 .bg-blur-white {
-    background-color: rgba(255, 255, 255, .4);
+    background-color: #eee;
 }
 
 .bg-blur-danger {
-    background-color: rgba(204, 0, 0, .4);
+    background-color: #f1a6a6;
 }
 
 .bg-blur-success {
-    background-color: rgba(0, 204, 0, .4);
-}
-
-.bg-blur-warning {
-    background-color: rgba(220, 185, 10, .4);
+    background-color: #98ef98;
 }
 
 .bg-blur-blue {
-    background-color: rgba(0, 0, 204, .4);
+    background-color: #a9c3fd;
+}
+
+.bg-blur-warning {
+    background-color: #f7e098;
 }
 
 .padding {
@@ -216,12 +218,15 @@ template {
 .padding-lg {
     padding: 2rem;
 }
-.flex-wrap{
-	flex-wrap: wrap;
+
+.flex-wrap {
+    flex-wrap: wrap;
 }
-.flex-nowrap{
-	flex-wrap: nowrap;
+
+.flex-nowrap {
+    flex-wrap: nowrap;
 }
+
 .text-wrap {
     word-break: break-all;
     text-align: justify;
@@ -239,7 +244,6 @@ template {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    text-align: justify;
 }
 
 .text-no-wrap-1 {
@@ -335,7 +339,6 @@ template {
 
 table {
     width: 100%;
-    line-height: 1;
 }
 
 table.text-center {
@@ -372,13 +375,194 @@ th {
 }
 
 .btn {
-    padding: .5rem 1rem;
-    border-radius: .15rem
+    padding: .7rem 1rem;
+    line-height: 1;
+    border-radius: .12rem;
+    display: inline-block;
+    background-color: #eee;
+    border: 0;
+    min-width: 6rem;
 }
 
-.btn:active {
-    border-color: #ccc;
+.btn:disabled {
+    cursor: not-allowed;
+    color: #eee;
+}
+
+.btn-default.active,
+.btn-default:active {
     background-color: #ccc;
+}
+
+.btn-default:disabled {
+    color: #aaa;
+    background-color: #ddd;
+}
+
+.btn-danger,
+.btn-warning,
+.btn-blue,
+.btn-success {
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #e55;
+}
+
+.btn-danger.active,
+.btn-danger:active {
+    background-color: #c00;
+}
+
+.btn-danger:disabled {
+    background-color: #e89797;
+}
+
+.btn-success {
+    background-color: #5d5;
+}
+
+.btn-success.active,
+.btn-success:active {
+    background-color: #0c0;
+}
+
+.btn-success:disabled {
+    background-color: #97e897;
+}
+
+.btn-blue {
+    background-color: #6192ff;
+}
+
+.btn-blue.active,
+.btn-blue:active {
+    background-color: #3f6cd0;
+}
+
+.btn-blue:disabled {
+    background-color: #95afea;
+}
+
+.btn-warning {
+    background-color: #F6A623;
+}
+
+.btn-warning.active,
+.btn-warning:active {
+    background-color: #e6991a;
+}
+
+.btn-warning:disabled {
+    background-color: #ecd793;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.btn-file [type=file] {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.input {
+    display: inline-block;
+    width: 100%;
+    padding: 0 .5rem;
+    border-radius: .1rem;
+    border: 1px solid #ddd;
+    height: 2.5rem;
+}
+
+.border {
+    border: 1px solid #ddd;
+}
+
+.border-b {
+    border-bottom: 1px solid #ddd;
+}
+
+.border-t {
+    border-top: 1px solid #ddd;
+}
+
+.border-tb {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.list {
+    padding-left: 1rem;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2rem;
+}
+
+.list>li {
+    padding-right: 1rem;
+    min-height: 3rem;
+    align-items: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+.list>li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+.list>li input {
+    border: 0;
+}
+
+.list>li [class*=padding] {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.list>li input[type=checkbox],
+.list>li input[type=radio] {
+    width: 1rem;
+    height: 1rem;
+    vertical-align: middle;
+    margin-right: 0.3rem;
+}
+
+
+.dot {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #e55;
+    border-radius: 50%;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .cover {
@@ -392,7 +576,6 @@ th {
     min-height: 300px;
     pointer-events: none;
     opacity: 0;
-    transition-duration: .3s;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -400,6 +583,7 @@ th {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 3rem;
 }
 
 .cover.show-cover {
@@ -411,8 +595,8 @@ th {
     width: 86%;
     max-height: 96%;
     max-width: 20rem;
-    background-color: rgba(255, 255, 255, .96);
-    border-radius: 0.2rem;
+    background-color: rgba(255, 255, 255, .98);
+    border-radius: 0.3rem;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -420,11 +604,12 @@ th {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    position: relative;
 }
 
 .alert .alert-title {
     padding: 0 1rem;
-    height: 2.8rem;
+    height: 3rem;
     flex-shrink: 0;
     display: -webkit-flex;
     display: -moz-flex;
@@ -445,7 +630,7 @@ th {
 }
 
 .alert .alert-bottom {
-    height: 2.8rem;
+    height: 3rem;
     flex-shrink: 0;
     border-top: 1px solid rgba(0, 0, 0, .1);
     justify-content: space-between;
@@ -457,8 +642,6 @@ th {
 }
 
 .alert .alert-bottom .btn {
-    background: none;
-    border: 0;
     border-radius: 0;
     display: -webkit-flex;
     display: -moz-flex;
@@ -466,11 +649,16 @@ th {
     display: -o-flex;
     display: flex;
     flex: 1;
+    border: 0;
     justify-content: center;
     align-items: center;
 }
 
-.alert .alert-bottom .btn:active {
+.alert .alert-bottom .btn-default {
+    background: none;
+}
+
+.alert .alert-bottom .btn-default:active {
     background: rgba(0, 0, 0, .05);
 }
 
@@ -484,4 +672,44 @@ th {
 
 .alert .alert-bottom .btn:not(:last-child) {
     border-right: 1px solid rgba(0, 0, 0, .1);
+}
+
+.dropdown-btn {
+    position: relative;
+}
+
+.dropdown-btn .dropdowns-list {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: #fff;
+    padding-left: 0;
+    min-width: 10rem;
+    color: #333;
+    box-shadow: 0.06rem 0.06rem 0.4rem rgba(0, 0, 0, .2)
+}
+
+.dropdown-btn .dropdowns-list-right {
+    left: auto;
+    right: 0;
+}
+
+.dropdown-btn:focus .dropdowns-list {
+    display: block;
+    border-radius: .2rem;
+}
+
+.dropdown-btn .dropdowns-list>li {
+    padding-left: .8rem;
+    padding-right: .8rem;
+    height: 3rem;
+    line-height: 3rem;
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown-btn .dropdowns-list>li:active {
+    background-color: rgba(0, 0, 0, .1);
 }
